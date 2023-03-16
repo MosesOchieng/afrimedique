@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Doctors Page.</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="navbar">
+	<a href="#home">Home</a>
+  <a href="#contact">Physician:</a>
+  <div class="topnav-right">
+    <a href="#search">About</a>
+    <a href="#about">Log out</a>
+  </div>
+</div>
+
+<!-- Side navigation -->
+<div class="sidenav">
+<br><br><br>
+Dashboard
+<ul>
+	<a href="#">Home</a>
+  <a href="#">Hospital</a>
+  <a href="#">Profile.</a>
+</ul>
+<br>
+<br>
+Reports
+<ul>
+	<a href="#">Feedback</a>
+	<a href="#">Cases</a>
+  <a href="#">Records.</a>
+  <a href="#">Files</a>
+</ul>
+
+
+	</div>
+
+<!-- Page content -->
+<div class="main">
+
+	<span id="mrn_data">12398790</span>
+	<span id="row_date">03/15/2019</span>
+
+	<table id="" class="tablestyle">
+ <tr>
+  <th>Patient Class</th>
+  <th>Disease</th>
+  <th>Health Status</th>
+  <th>Release Date</th>
+  <th>Message Date</th>
+  <th>Description.</th>
+  <th>Action</th>
+	</tr>
+
+ <tr id="row1">
+	 <td>Post Acute Care</td>
+	 <td>Injury & Burns</td>
+	 <td>Good</td>
+	 <td></td>
+	 <td></td>
+	 <td></td>
+	 <td><button id="myBtn">Schedule</button></td>
+		</tr>
+	</table>
+  <table id="" class="tablestyle">
+ <tr>
+  <th>Patient Class</th>
+  <th>Disease</th>
+  <th>Health Status</th>
+  <th>Release Date</th>
+  <th>Message Date</th>
+  <th>Description.</th>
+  <th>Action</th>
+	</tr>
+
+ <tr id="row1">
+	 <td>Chronic    Care</td>
+	 <td>Injury & Burns</td>
+	 <td>Good</td>
+	 <td></td>
+	 <td></td>
+	 <td></td>
+	 <td><button id="myBtn">Schedule</button></td>
+		</tr>
+	</table>
+  <table id="" class="tablestyle">
+ <tr>
+  <th>Patient Class</th>
+  <th>Disease</th>
+  <th>Health Status</th>
+  <th>Release Date</th>
+  <th>Message Date</th>
+  <th>Description.</th>
+  <th>Action</th>
+  </tr>
+
+ <tr id="row1">
+   <td>Post Acute Care</td>
+   <td>Injury & Burns</td>
+   <td>Good</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td><button id="myBtn">Schedule</button></td>
+    </tr>
+  </table>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<div id="datafield1">
+	<br>
+			<div class="tab">
+			<h2>&nbsp; <i>DASHBOARD</i></h2>
+			<button class="tablinks" onclick="openCity(event, $(this).text())" id="defaultOpen">Schedule</button>
+			<button class="tablinks" onclick="openCity(event, $(this).text())">Approvals</button>
+			<button class="tablinks" onclick="openCity(event, $(this).text())">Status Board</button>
+			<button class="tablinks" onclick="openCity(event, $(this).text())">Cancel</button>
+		 </div>
+
+		 <div id="Schedule" class="tabcontent">
+			<form name="casesched" action="" method="post" id="casesched"><input type="hidden" name="mrn" id="mrn"><input type="hidden" name="swit" id="swit"><input type="hidden" name="finaldate" id="finaldate"><input type="hidden" name="finalpostop" id="finalpostop">
+			 <h3>Prepare Patient Prescription Care.</h3>
+			<div class="status">Status: Good</div>
+			<p>CPT(s): <i>12345, 122334</i><br> ICD(s): <i>12345, 122334</i><br> Diagnoses: <i>Medial Meniscus Tear</i><br>
+
+			 <hr>
+			<div class="row"><div class="column">
+				Expected duration of home care plan: <br>
+				Planned intervention time:<br>
+					 Start home care intervention date: <input type="date" name="casedate"><br><br>
+			 </div>
+			 <div class="column">
+				Recommended follow up for case: <br>
+				Enter Date of stop: <input type="date" name="postopdate"><br><br>
+						</div>
+			</div>
+
+			 <hr> Documents to Prepare for Case Scheduling: <br>
+				<div class="row" id="docsbox">
+				<div class="column" style="background-color:#bbb;">
+				 <label class="container">Case Posting
+													<input type="checkbox" name="docs" id="posting" value="posting">
+													<span class="checkmark"></span>
+												</label><br>
+				 <label class="container">Instruction Sheet
+													<input type="checkbox" checked="checked" name="docs" id="instruction" value="instruction">
+													<span class="checkmark"></span>
+												</label>
+
+				</div>
+				<div class="column" style="background-color:#bbb;">
+				 <label class="container">Clearance Request
+													<input type="checkbox" checked="checked" name="docs" id="clearance" value="clearance">
+													<span class="checkmark"></span>
+												</label><br>
+
+				 <label class="container">Work/School Note
+													<input type="checkbox" checked="checked" name="docs" id="school" value="school">
+													<span class="checkmark"></span>
+												</label>
+
+				</div>
+			 </div>
+
+			 <hr> Patient Message :
+			 <div class="row">
+				<div class="column" style="background-color:#bbb;">
+				 <label class="container">Patient Information :
+													 <input type="text" name="parties" id="patient" value="">
+
+												 </label><br>
+
+
+			 </div>
+</div>
+			 <br>
+			 <div class="tooltip"><input type="button" value="Schedule Case" name="schcase" id="schcase"><span class="tooltiptext">Automatically post case sending selected documents, making calendar entry, and sending information to selected parties</span></div>
+			 <div class="tooltip"><input type="button" value="Reschedule Case" disabled  name="resched" id="resched"><span class="tooltiptext">Automatically re-post case preparing updated documents, revising calendar entry, and sending updated information to previously contact parties</span></div>
+	&nbsp; &nbsp;&nbsp; &nbsp;
+				<div class="tooltip"><input type="button" value="Prepare Documents" name="docprep" id="docprep"><span class="tooltiptext">Prepare selected documents without submitting</span></div>
+				<div class="tooltip"><input type="button" value="Notify Parties" name="partyprep" id="partyprep"><span class="tooltiptext">Notify selected parties</span></div>
+
+			 <p><span id="docsconf"></span></p>
+			</p>
+
+			</form>
+		 </div>
+		 <div id="Approvals" class="tabcontent">
+			<h3>Case Approvals/Authorizations</h3>
+			<div class="status">Status: Unconfirmed</div>
+			<p>CPT(s): <i>12345, 122334</i><br> ICD(s): <i>12345, 122334</i><br> Diagnoses: <i>Medial Meniscus Tear</i><br>
+
+			 <fieldset>
+				<legend>Pre-Authorization Required? &nbsp;
+				 <label class="container">Yes<input type="radio" name="auth" checked="checked"><span class="radiomark"></span></label>
+				 <label class="container">No<input type="radio" name="auth"><span class="radiomark"></span></label>
+				</legend>
+				<label class="container">Insurance Authorization Submitted <input type="checkbox" name="AuthSubm"><span class="checkmark"></span><input type="date" name="submitdateauth" disabled></label> <br>
+				<label class="container">Insurace Approval Obtained <input type="checkbox" name="AuthSubm"><span class="checkmark"></span><input type="date" name="submitdateauth" disabled> <input type="text" disabled value="Pre-Authorization Number"></label>
+			 </fieldset>
+			</p>
+		 </div>
+		 <div id="Status Board" class="tabcontent">
+			<h3>Patient list</h3>
+			<p>Diseases</p>
+			 <table width="100%" class="tablestyle" id="statusboard">
+				<tr>
+				 <th width="250">Patient Name</th>
+				 <th>Health Status</th>
+				 <th width="85">Health Condition</th>
+				 <th width="85">Days</th>
+				</tr>
+				<tr>
+				 <td>Patient</td>
+				 <td>Email: <a href="">Information About Your Surgery</a></td>
+				 <td>2/14/19</td>
+				 <td>Unread</td>
+				</tr>
+				<tr>
+				 <td>Hospital- Vee Jones</td>
+				 <td>Email: <a href="">Case Posting for First Name Last Name's Surgery on 2/16/18</a></td>
+				 <td>2/14/19</td>
+				 <td>2/15/19</td>
+				</tr>
+				<tr>
+				 <td>Stryker Vendor- Bryan Conklin</td>
+				 <td>Email: <a href="">Specialized Equipment Request for Case on 2/16/18</a></td>
+				 <td>2/14/19</td>
+				 <td>Unread</td>
+				</tr>
+			 </table>
+
+
+
+			<p>Compiled Documents/Tasks</p>
+			 <table width="100%" class="tablestyle" id="statusboard2">
+				<tr>
+				 <th width="300">Title</th>
+				 <th width="85">Created</th>
+				 <th width="85">Sent</th>
+				 <th>Recipients</th>
+				</tr>
+				<tr>
+				 <td><a href="">Posting Sheet</a></td>
+				 <td>2/14/19</td>
+				 <td>2/14/19</td>
+				 <td>Patient, Hospital, Vendors, DME</td>
+				</tr>
+				<tr>
+				 <td><a href="">Instruction Sheet</a></td>
+				 <td>2/14/19</td>
+				 <td>2/15/19</td>
+				 <td>Patient</td>
+				</tr>
+				<tr>
+				 <td><a href="">Clearance Request</a></td>
+				 <td>2/14/19</td>
+				 <td>2/14/19</td>
+				 <td>PCP, Hospital</td>
+				</tr>
+				<tr>
+				 <td><a href="">Work/School Note</a></td>
+				 <td>2/14/19</td>
+				 <td>2/15/19</td>
+				 <td>Patient</td>
+				</tr>
+				<tr>
+				 <td><a href="">Calendar Entry</a></td>
+				 <td>2/14/19</td>
+				 <td>2/15/19</td>
+				 <td>Surgeon</td>
+				</tr>
+			 </table>
+
+
+		 </div>
+		 <div id="Cancel" class="tabcontent">
+			<h3>Cancel Case</h3>
+			<p>
+			 Please select the reason for cancellation:
+			 <select>
+				<option>Click to select...</option>
+				<option>Cannot afford</option>
+				<option>Found another surgeon</option>
+				<option>Cannot reach patient</option>
+				<option>Would like to delay indefinitely</option>
+				<option>No longer interested in getting surgery</option>
+				<option>To risky to undergo surgery</option>
+			 </select>
+			 <br><br>
+			 Please note once the case has been cancelled, this action cannot be undone.<br>The patient will have to be re-entered in system if elects to have surgery again. <br><br>
+			 <input type="button" value="Cancel Case" id="CancelCaseBtn" style="background:red;">
+			</p>
+		 </div>
+
+		 <div class="console" id="tasks">
+			<ul class="t">
+			 <b>&nbsp;PENDING TASKS</b>
+			 <span id="tasklist">
+			 <li><label class="container">Therapy Ordered<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Post-op Appt<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Vendors Emailed<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Facility Emailed<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">DME Emailed<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Auth/Cert Entered<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Auth/Ins Scanned<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Medical Clearance<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Calendar Entry<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			 <li><label class="container">Surgery in Epic<input type="checkbox" name="ptasks"><span class="checkmark"></span></label></li>
+			</span>
+			</ul>
+
+		 </div>
+	</div>
+
+	</div>
+
+</div>
+
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
