@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Page</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header role="banner">
+  <h1>Patient  Panel</h1>
+  <ul class="utilities">
+    <br>
+    <li class="users"><a href="#">My Account</a></li>
+    <li class="logout warn"><a href="">Log Out</a></li>
+  </ul>
+</header>
+
+<nav role='navigation'>
+  <ul class="main">
+    <li class="dashboard"><a href="#">Dashboard</a></li>
+    <li class="edit"><a href="#">Message Doctor</a></li>
+    <li class="write"><a href="#">Add Doctor</a></li>
+
+    <li class="users"><a href="#">Profile Settings</a></li>
+  </ul>
+</nav>
+
+<main role="main">
+
+  <section class="panel important">
+    <h2>Welcome to your Dashboard,</h2>
+    <ul>
+      <li>Information Panel</li>
+    </ul>
+  </section>
+
+  <section class="panel important">
+    <h2>Health Condition Status</h2>
+      <form action="#" method="post">
+        <div class="twothirds">
+          Patient Name :<br/>
+          <input type="text" name="title" size="40"/><br/><br/>
+          Health Condition :<br/>
+          <input type="text" name="title" size="40"/><br/><br/>
+          Patient Health  Status :<br/>
+          <input type="radio" value="Good">  Good
+          <input type="radio" value="Good">  Deteroriating
+          <input type="radio" value="Good">  Worse
+        </div>
+        <div>
+          <input type="submit" name="submit" value="Send" />
+        </div>
+        </div>
+      </form>
+  </section>
+
+</main>
+<!-- partial -->
+
+</body>
+</html>
